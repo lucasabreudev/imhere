@@ -24,7 +24,7 @@ export function Home() {
       [
         {
           text: 'Sim',
-          onPress: () => Alert.alert('Excluído', `${name} foi removido da lista`)
+          onPress: () => setParticipants(prevState => prevState.filter(participant => participant !== name))
         },
         {
           text: 'Não',
@@ -32,7 +32,6 @@ export function Home() {
         }
       ]
     )
-
   }
 
   return (
